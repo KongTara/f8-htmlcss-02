@@ -30,8 +30,12 @@ a {
 
 .btn {
     display: inline-block;
-    height: 50px;
-    padding: 11px 41px;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 50px;
+    min-width: 118px;
+    padding: 0 41px;
     border-radius: 25px;
     background: #171100;
     text-align: center;
@@ -45,10 +49,16 @@ a {
     background-color: #fffcf4;
 }
 
+header.fixed {
+    position: sticky;
+    top: -28px;
+    z-index: 1;
+}
 .header .body {
     display: flex;
     align-items: center;
-    padding-top: 47px;
+    padding: 36px 0 8px;
+    background-color: #fffcf4;
 }
 
 .nav {
@@ -59,32 +69,19 @@ a {
     display: flex;
 }
 
-.nav li a {
-    display: inline-block;
+.nav a {
     color: #5f5b53;
     padding: 8px 21px;
     font-size: 1.6rem;
-    font-weight: 400;
     text-transform: capitalize;
-    line-height: 1.75; /* 175% */
 }
 
-.nav li:first-child a {
-    color: #171100;
-    font-weight: 600;
+.nav a:hover,
+.nav li.active a {
+    color: #171100 !important;
+    text-shadow: 1px 0 0 currentColor;
+    /* font-weight: 600; */
     position: relative;
-}
-
-.nav li:first-child a::after {
-    position: absolute;
-    content: "";
-    display: inline-block;
-    width: 12px;
-    height: 2px;
-    bottom: 8px;
-    left: 21px;
-    border-radius: 1px;
-    background: #171100;
 }
 
 .nav li:hover a {
@@ -92,16 +89,24 @@ a {
     background-color: #7772;
 }
 
+.nav li.active a::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 2px;
+    left: 21px;
+    bottom: 6px;
+    border-radius: 1px;
+    background: #171100;
+}
+
 .body .action {
     margin-left: 47px;
 }
 
 .body .action-btn {
-    color: #fff;
-    padding: 12px 41px;
-    font-size: 1.6rem;
-    font-weight: 600;
-    line-height: 1.75; /* 175% */
+    min-width: 114px;
     text-transform: capitalize;
 }
 
